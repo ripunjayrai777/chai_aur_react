@@ -21,7 +21,7 @@ const hook = () => {
     // }
     const changeCar=()=>{
       setCar((xyz)=>{
-        return {...xyz, color: "Black"}
+        return {...xyz, color: "Black", year:"1971"}
       })
     }
 
@@ -34,6 +34,19 @@ const hook = () => {
       setCount(prev => prev+1)
       setCount(prev => prev+1)
     }
+
+    const [num, setNum] = useState(0);
+    const addNum=()=>{
+      if(num<20){
+        setNum(num+1);
+      }
+      
+    }
+    const removeNum=()=>{
+      if(num>0){
+        setNum(num-1);
+      }
+    }
   return ( 
     
     <>
@@ -44,6 +57,11 @@ const hook = () => {
     <h1>Click for Couter</h1>
     <h2>Count: {count}</h2>
     <button onClick={counter}>Increase</button>
+
+    <h1>Here is assignment work.</h1>
+    <button onClick={addNum}>+1</button>
+    <h2>Counter: {num}</h2>
+    <button onClick={removeNum}>-1</button>
     </>
   )
 }
