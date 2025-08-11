@@ -1,4 +1,4 @@
-
+import Card from './components/Card'
 import './App.css'
 
 function App() {
@@ -6,7 +6,8 @@ function App() {
 
   return (
     <>
-      <h1 className='bg-orange-500 p-5 rounded-xl text-white'>Tailwind Test</h1>
+      <Card user="Rohit"/>
+      <Card user="Anil"/>
     </>
   )
 }
